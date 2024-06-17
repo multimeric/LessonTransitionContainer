@@ -6,4 +6,5 @@ RUN git clone https://github.com/carpentries/lesson-transition.git
 WORKDIR lesson-transition
 RUN git submodule update --init git-filter-repo 
 RUN R -e 'renv::restore()'
+ENV CI=1 GITHUB_PAT=
 # make sandpaper/carpentries-incubator/docker-introduction.json
